@@ -1,22 +1,111 @@
-.btn-orange {
-    background-color: #e67e22;
+/* Configuración general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #5135ec; /* Color institucional naranja */
+    padding-bottom: 10px;
+}
+
+h3 {
+    margin-top: 25px;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+/* Sección de entrada */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #5135ec;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#btnAgregar {
+    background-color: #6d55f4;
+    color: white;
+}
+
+#btnAgregar:hover {
+    background-color: #5135ec;
+}
+
+#btnRemover {
+    background-color: #5135ec;
     color: white;
     width: 100%;
-    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
-.btn-red {
-    background-color: #c0392b;
-    color: white;
+#btnRemover:hover {
+    background-color: #5135ec;
+}
+
+/* Estilo de listas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f9f9f9;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid #2980b9;
+}
+
+li label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     width: 100%;
 }
 
-.btn-red:hover {
-    background-color: #a93226;
-}
-
-hr {
-    margin: 20px 0;
-    border: 0;
-    border-top: 1px solid #eee;
+/* Tareas realizadas */
+.tarea-realizada {
+    border-left: 4px solid #bdc3c7;
+    color: #95a5a6;
+    text-decoration: line-through;
+    font-style: italic;
 }
