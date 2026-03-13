@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 8080; // Puerto solicitado [cite: 31]
+const PORT = 8080; // Puerto solicitado 
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -9,12 +9,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 let pendientes = [];
 let realizadas = [];
 
-// Obtener listas (Característica 4 y 6) [cite: 22, 24]
+// Obtener listas 
 app.get('/tareas', (req, res) => {
     res.json({ pendientes, realizadas });
 });
 
-// Agregar tarea con validaciones (Característica 7 y 8) [cite: 25, 26]
+// Agregar tarea con validaciones 
 app.post('/agregar', (req, res) => {
     const nueva = req.body.tarea.trim();
     if (!nueva) return res.status(400).json({ msg: "La caja de texto está vacía." });
@@ -25,7 +25,7 @@ app.post('/agregar', (req, res) => {
     res.json({ success: true });
 });
 
-// Mover de pendientes a realizadas (Característica 5) 
+// Mover de pendientes a realizadas 
 app.post('/completar', (req, res) => {
     const indices = req.body.indices.sort((a, b) => b - a);
     indices.forEach(i => {

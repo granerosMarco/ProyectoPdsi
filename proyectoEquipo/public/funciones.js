@@ -16,7 +16,7 @@ async function refrescar() {
         `<li class="tarea-realizada"><label><input type="checkbox" class="chk-real" value="${i}"> ${t}</label></li>`).join('');
 }
 
-// Evento Agregar (Características 7 y 8) [cite: 25, 26]
+// Evento Agregar 
 btnAdd.onclick = async () => {
     const res = await fetch('/agregar', {
         method: 'POST',
