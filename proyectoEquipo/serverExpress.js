@@ -1,18 +1,19 @@
 const express = require('express');
-const path = require('path');
+const path = require('path'); // ¡Importante tener esta línea!
 const app = express();
 
-// Esto le dice a Express que la carpeta 'public' está junto a este archivo
+app.use(express.json());
+
+// Esta línea es la CLAVE: usa __dirname para que no importe desde dónde abras la terminal
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Ruta principal
+// Ruta para servir el index.html
 app.get('/', (req, res) => {
-    // Esto busca el index.html dentro de la carpeta public de forma segura
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// ... resto de tus rutas (agregar, completar, eliminar) ...
+// ... tus rutas de tareas (get, post agregar, post completar, etc) ...
 
 app.listen(8080, '0.0.0.0', () => {
-    console.log("Servidor corriendo en http://localhost:8080");
+    console.log("Servidor corriendo en el puerto 8080");
 });
