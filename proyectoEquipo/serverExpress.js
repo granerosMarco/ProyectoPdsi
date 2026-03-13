@@ -44,6 +44,6 @@ app.post('/eliminar-final', (req, res) => {
     res.json({ success: true });
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Servidor corriendo en: http://localhost:${PORT}`);
+app.listen(8080, '0.0.0.0', () => { // inicia servidor puerto 8080
+    console.log('Servidor corriendo en http://0.0.0.0:8080'); // mensaje inicio
 });

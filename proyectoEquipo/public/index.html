@@ -2,29 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Pendientes - U de C</title>
-    <link rel="stylesheet" href="/ProyectoPdsi/proyectoEquipo/public/style.css">
+    <title>Lista de Pendientes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Lista de Pendientes</h1>
-        
-        <div class="input-group">
-            <input type="text" id="inputTarea" placeholder="Escribe una tarea...">
-            <button id="btnAgregar">Agregar</button>
-        </div>
 
-        <h3>Tareas por Hacer</h3>
-        <ul id="listaPendientes"></ul>
-        <button id="btnRemover" class="btn-orange">Marcar Realizadas</button>
+<div class="container">
 
-        <hr>
+    <h1>Lista de Pendientes</h1>
 
-        <h3>Tareas Realizadas</h3>
-        <ul id="listaRealizadas"></ul>
-        <button id="btnEliminarFinal" class="btn-red">Eliminar Seleccionadas</button>
+    <div class="input-group">
+        <input type="text" id="inputTarea" placeholder="Escribe una tarea...">
+        <button id="btnAgregar">Agregar</button>
     </div>
 
-    <script src="funciones.js"></script>
+    <h3>Tareas por Hacer</h3>
+    <ul id="listaPendientes"></ul>
+
+    <button id="btnRemover">Marcar Realizadas</button>
+
+    <hr>
+
+    <h3>Tareas Realizadas</h3>
+    <ul id="listaRealizadas"></ul>
+
+    <button id="btnEliminarFinal">Eliminar Seleccionadas</button>
+
+</div>
+
+<script src="funciones.js"></script>
+
 </body>
 </html>
