@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Online</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="chat-page">
+
+  <!-- ── Barra superior ── -->
+  <header class="chat-header">
+    <span class="chat-header-icon">💬</span>
+    <span class="chat-header-title">Chat Online</span>
+    <span id="user-count" class="chat-user-count">0 usuario(s)</span>
+  </header>
+
+  <!-- ── Área de mensajes ── -->
+  <main id="messages" class="chat-messages"></main>
+
+  <!-- ── Barra de escritura ── -->
+  <footer class="chat-footer">
+    <input
+      type="text"
+      id="msg-input"
+      class="chat-input"
+      placeholder="Escribe un mensaje..."
+      maxlength="500"
+      autocomplete="off"
+    />
+    <button id="send-btn" class="chat-send-btn">Enviar</button>
+  </footer>
+
+  <!-- Socket.io cliente (servido automáticamente por el servidor) -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/chatscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Online – Ingresar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-page">
+
+  <div class="login-card">
+    <div class="login-logo">💬</div>
+    <h1 class="login-title">Chat Online</h1>
+    <p class="login-subtitle">Ingresa tu nombre para comenzar</p>
+
+    <div class="login-form">
+      <input
+        type="text"
+        id="username-input"
+        class="login-input"
+        placeholder="Tu nombre de usuario..."
+        maxlength="30"
+        autocomplete="off"
+        autofocus
+      />
+      <span id="login-error" class="login-error"></span>
+      <button id="login-btn" class="login-btn">Entrar al Chat →</button>
+    </div>
+  </div>
+
+  <script src="/indexscript.js"></script>
+</body>
+</html>
